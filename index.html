@@ -1,13 +1,257 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rouvoo</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/assests/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/assets/css/style.css">
+  <title>Rouvoo</title>
+</head>
+
+<nav class="fixed left-0 w-full z-10000000 md:m-3">
+  <div class="md:max-w-[800px] mx-auto sticky top-0 z-1000">
+    <nav class="bg-white sm:rounded-full border border-[#00000010] nav-shadow">
+      <div class="mx-auto">
+        <div class="flex  gap-3 items-center justify-between py-2 lg:py-4 w-11/12 mx-auto">
+          <div class="">
+            <a href="/">
+              <img src="/src/assets/blue-logo-ByyzGDZz.svg" alt="Rouvoo Logo" class="w-29 md:w-36">
+            </a>
+          </div>
+          <div class="hidden lg:flex tx-inter">
+            <ul class="flex gap-10 tracking-[0.3px] text-sm font-medium">
+              <li>
+                <a href="/#about" class="hover:underline hover:transition-all hover:duration-300">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/#vendors">
+                  Become a Partner
+                </a>
+              </li>
+              <li>
+                <a href="/#faq">
+                  FAQs
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="hidden lg:flex gap-3 lg:gap-2 items-center transition-all duration-300 ease-in-out">
+            <a href="/#">
+              <button
+                class="rounded-full min-w-20 py-1.5 px-4 font-medium tracking-[0.8px] text-nowrap border-[#fe6c17] bg-[#fe6c17] text-sm text-[#441006] hover:bg-[#e65a00] cursor-pointer hover:text-white transition-all duration-300 ease-in-out"
+                type="button">Login</button>
+            </a>
+          </div>
+          <div id="mobileNav" class="lg:hidden hamburger cursor-pointer">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="mobileNavBar"
+      class="flex flex-col fixed top-0 left-0 w-screen h-screen bg-white z-40 pt-2 pb-[10vh] -translate-x-full transition-transform duration-300">
+      <div class="mobile-navbar-header flex gap-2 justify-between items-center pr-3"><a href="/">
+          <div class="p-3"><img src="/src/assets/blue-logo-ByyzGDZz.svg" class="w-32 h-auto" alt="Rouvoo Logo"></div>
+        </a>
+        <div id="closeNavbar"
+          class="close-hamburg flex lg:hidden justify-end items-center gap-2 cursor-pointer z-50 relative">
+          <p class="mb-0 font-bold text-sm tracking-wide">CLOSE</p>
+          <div>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-navbar-body p-6 grow h-full flex flex-col justify-between">
+        <div>
+          <div class="mb-10 min-h-[50px]"></div>
+          <div>
+            <ul class="">
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Home</span></a>
+              </li>
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#about"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">About
+                    Us</span></a></li>
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#faq"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">FAQs</span></a>
+              </li>
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#contact-us"><span
+                    style="rotate: -90deg;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"
+                      viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Contact
+                    us</span></a></li>
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#riders"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Become a
+                    Rider</span></a></li>
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#vendors"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                      <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Become a
+                    Vendor</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <ul class="text-center mb-4 mt-20">
+            <li class="mb-3"><a class="text-[#101828] text-[15px] font-semibold leading-[150%]"><button
+                  class="rounded-full min-w-20 py-3 px-4 font-medium tracking-[0.3px] text-nowrap w-full" type="button"
+                  style="border: 1px solid rgb(254, 108, 23); background-color: rgb(254, 108, 23); color: rgb(68, 16, 6); font-size: 15px;">Get
+                  started</button></a></li>
+          </ul>
+          <div class="footer-social-icons mt-10">
+            <div class="flex flex-wrap gap-8 justify-center *:underline"><a
+                href="https://www.linkedin.com/company/rouvoo/">LinkedIn</a><a
+                href="https://x.com/Rouvoo_ng?t=irNaTKvpfNE1__5Z3Amrpw&amp;s=09">X</a><a
+                href="https://Instagram.com/rouvoo_ng">Instagram</a><a href="https://wa.me/+2347047900048">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobileNavBarOverlay" class="fixed inset-0 bg-black bg-opacity-10 hidden z-30 top-0"></div>
+  </div>
+</nav>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/assets/js/navbar.js" defer></script>
+  <script type="module" src="/src/assets/js/router.js" defer></script>
+</body>
+
+<footer class="bg-[#080403] pt-[53px] lg:pt-[120px] relative">
+  <div class="container mx-auto flex flex-col gap-20 lg:gap-[120px] tx-inter">
+    <div class="flex items-center flex-col gap-2 sm:gap-5 justify-center w-11/12 mx-auto">
+      <div class="flex items-start gap-5 flex-col">
+        <p class="text-white text-[36px] sm:text-[40px] font-semibold">Subscribe to our newletter</p>
+        <div class="w-full flex flex-col sm:flex-row items-center gap-5"><input name="Name" placeholder="Name"
+            class="w-full sm:w-[300px] xl:w-[550px] border border-x-0 border-t-0 border-b-[#ccc] bg-transparent outline-none text-[#ccc] p-4"
+            value=""><input name="Email" placeholder="Email"
+            class="w-full sm:w-[300px] xl:w-[550px] border border-x-0 border-t-0 border-b-[#ccc] bg-transparent outline-none text-[#ccc] p-4"
+            value=""><a class="sm:block hid den"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+              viewBox="0 0 512 512" class="text-[#ccc] text-[30px]" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z">
+              </path>
+            </svg></a></div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row lg:items-center justify-between sm:py-8 gap-y-8 w-11/12 mx-auto border-x-0 border-b-0 border-[#bdbdbd] border-t-0">
+      <div class="lg:w-[30%]">
+        <ul class=" text-[#fdfdfd] *:text-[14px] *:mb-3">
+          <li class="text-[#fff6ed40] mb-5"></li>
+          <li><a href="/">
+              <p>Akure, Ondo State.</p>
+            </a></li>
+          <li><a href="tel:+2347047900048">
+              <p>+2347047900048</p>
+            </a></li>
+          <li><a href="mailto:support@rouvoo.com">
+              <p>support@rouvoo.com</p>
+            </a></li>
+        </ul>
+      </div>
+      <div class="md:w-[80%] lg:w-[50%] grid grid-cols-1 gap-y-5 sm:grid-cols-3">
+        <ul class=" text-[#fdfdfd] *:text-[14px] *:mb-4">
+          <li class="text-[#fff6ed40]"><a href="/">
+              <p>Company</p>
+            </a></li>
+          <li><a href="/about">
+              <p>About Us</p>
+            </a></li>
+          <li><a href="/riders">
+              <p>Riders</p>
+            </a></li>
+          <li><a href="/vendors">
+              <p>Vendors</p>
+            </a></li>
+          <li><a href="/faq">
+              <p>FAQs</p>
+            </a></li>
+        </ul>
+        <ul class=" text-[#fdfdfd] *:text-[14px] *:mb-4">
+          <li class="text-[#fff6ed40]"><a href="/">
+              <p>Support</p>
+            </a></li>
+          <li><a href="/contact-us">
+              <p>Contact Us</p>
+            </a></li>
+          <li><a href="/faqs">
+              <p>FAQs</p>
+            </a></li>
+        </ul>
+        <ul class=" text-[#fdfdfd] *:text-[14px] *:mb-4">
+          <li class="text-[#fff6ed40]"><a href="/">
+              <p>Follow Us</p>
+            </a></li>
+          <li><a target="_blank" href="https://Instagram.com/rouvoo_ng" class="flex items-center gap-2">
+              <p>Instagram </p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                class="w-5 h-5 text-white -mt-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+              </svg>
+            </a></li>
+          <li><a target="_blank" href="https://x.com/Rouvoo_ng?t=irNaTKvpfNE1__5Z3Amrpw&amp;s=09"
+              class="flex items-center gap-2">
+              <p>X (Formerly Twitter)</p><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 24 24" class="w-5 h-5 text-white -mt-1" height="1em" width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+              </svg>
+            </a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/company/rouvoo/" class="flex items-center gap-2">
+              <p>LinkedIn</p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                class="w-5 h-5 text-white -mt-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+              </svg>
+            </a></li>
+          <li><a target="_blank" href="https://wa.me/+2347047900048" class="flex items-center gap-2">
+              <p>WhatsApp</p><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                class="w-5 h-5 text-white -mt-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path d="M6 6v2h8.59L5 17.59 6.41 19 16 9.41V18h2V6z"></path>
+              </svg>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between sm:py-4 gap-y-3 w-11/12 mx-auto sm:mt-8">
+        <p class="text-[#FFF6ED40] mt-2 text-[13px] tracking-[0.3px]">© 2025 &nbsp;ROUVOO. All rights reserved.</p>
+        <div class="sm:text-end">
+          <ul class="flex gap-5 sm:gap-8 items-center sm:justify-end text-[#FFF6ED40] *:text-[13px]">
+            <li><a href="/privacy"><span class="text-white">Privacy Policy</span></a></li>
+            <li><a href="/terms"><span class="text-white">Terms of Use</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="w-11/12 mx-auto"><img src="/src/assets/rouvoo-bottom-logo-DgsYhiNV.svg" class="w-full" alt="">
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>

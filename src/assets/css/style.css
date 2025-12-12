@@ -1,0 +1,129 @@
+@import"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
+@import "tailwindcss";
+
+body {
+    background-color: #fdfdfd;
+    min-height: 100vh;
+    position: relative;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden
+}
+
+.home-header {
+    background: linear-gradient(300.39deg,#0009 .63%,#0000 18.44%),url(../rouvoo-home-banner-BrbKfaG5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: top left;
+    height: 100%
+}
+
+.nav-shadow {
+    box-shadow: 0 2.69284px 23.5624px #00000014
+}
+
+.hamburger {
+    cursor: pointer;
+    position: relative;
+    margin: 10px 5px 10px 15px;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    padding: 8px;
+}
+
+.hamburger span {
+    background-color: #0009;
+    display: block;
+    height: .126em;
+    margin-bottom: .28em;
+    position: relative;
+    top: 0;
+    transition: all .3s ease-in-out;
+    width: 1.5em;
+}
+
+.hamburger span:nth-of-type(1) {
+    width: 1.25em;
+    margin-right: 2px
+}
+
+.hamburger span:nth-of-type(2) {
+    width: 1.8em
+}
+
+.hamburger span:nth-of-type(3) {
+    width: 1.5em;
+    margin-left: 8px
+}
+
+.tx-inter-t {
+    font-family: Inter Tight, sans-serif
+}
+
+.tx-inter {
+    font-family: Poppins, sans-serif
+}
+
+/* IMPORTANT: Let Tailwind handle the transform with -translate-x-full and translate-x-0 */
+/* Do NOT add any transform property here */
+
+.close-hamburg {
+    cursor: pointer;
+    position: relative;
+    margin: 10px 5px 10px 15px;
+    background-color: transparent;
+    color: #333;
+    padding: 8px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.close-hamburg div span {
+    background-color: #333;
+    display: block;
+    height: .133em;
+    margin-bottom: 0;
+    position: relative;
+    top: 0;
+    transition: all .3s ease-in-out;
+    width: 1.25em;
+}
+
+.close-hamburg div span:nth-of-type(1) {
+    width: 1.25em;
+    transform: rotate(135deg);
+}
+
+.close-hamburg div span:nth-of-type(2) {
+    width: 1.25em;
+    transform: rotate(-115deg);
+}
+
+.mobile-navbar-content-contact .location img {
+    width: 35px
+}
+
+.mobile-navbar-content-contact .location p span {
+    display: block;
+    font-size: 13.2333px;
+    line-height: 18px
+}
+
+.mobile-navbar-content-contact-social-icons a img {
+    width: 20px;
+    opacity: .95
+}
+
+.mobile-navbar-content-contact-number span {
+    font-size: 15px;
+    line-height: 22px
+}
+
+.mobile-navbar-content-contact-chat img {
+    width: 40px
+}
+
+.mobile-navbar-content-contact-chat p {
+    font-size: 15px;
+    line-height: 22px
+}
