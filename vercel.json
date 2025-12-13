@@ -1,3 +1,11 @@
 {
-  "rewrites": [{ "source": "/pages/(.*)", "destination": "/pages/$1" }]
+  "buildCommand": "echo 'Build complete'",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
