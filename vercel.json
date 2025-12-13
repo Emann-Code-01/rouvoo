@@ -1,7 +1,6 @@
 {
-  "buildCommand": "echo 'Build complete'",
-  "outputDirectory": "public",
-  "cleanUrls": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
