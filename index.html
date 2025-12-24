@@ -21,24 +21,24 @@
           <div class="hidden lg:flex tx-inter">
             <ul class="flex gap-10 tracking-[0.3px] text-sm font-medium text-[#333333]">
               <li>
-                <a href="/#about" class="hover:underline hover:transition-all hover:duration-300">
+                <a href="/about" class="hover:underline hover:transition-all hover:duration-300">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/#vendors" class="hover:underline hover:transition-all hover:duration-300">
+                <a href="/vendors" class="hover:underline hover:transition-all hover:duration-300">
                   Become a Partner
                 </a>
               </li>
               <li>
-                <a href="/#faq" class="hover:underline hover:transition-all hover:duration-300">
+                <a href="/faq" class="hover:underline hover:transition-all hover:duration-300">
                   FAQs
                 </a>
               </li>
             </ul>
           </div>
           <div class="hidden lg:flex gap-3 lg:gap-2 items-center transition-all duration-300 ease-in-out">
-            <a href="/#">
+            <a href="/">
               <button
                 class="rounded-full min-w-20 py-1.5 px-4 font-medium tracking-[0.8px] text-nowrap border-[#fe6c17] bg-[#fe6c17] text-sm text-[#441006] hover:bg-[#e65a00] cursor-pointer hover:text-white transition-all duration-300 ease-in-out"
                 type="button">Login</button>
@@ -78,32 +78,31 @@
                         stroke-linejoin="round"></path>
                     </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Home</span></a>
               </li>
-              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#about"><span style="rotate: -90deg;"><svg
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/about"><span style="rotate: -90deg;"><svg
                       xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                       <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                     </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">About
                     Us</span></a></li>
-              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#faq"><span style="rotate: -90deg;"><svg
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/faq"><span style="rotate: -90deg;"><svg
                       xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                       <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                     </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">FAQs</span></a>
               </li>
-              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#contact-us"><span
-                    style="rotate: -90deg;"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="8"
-                      viewBox="0 0 12 8" fill="none">
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/contact-us"><span style="rotate: -90deg;"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                       <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                     </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Contact
                     us</span></a></li>
-              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#riders"><span style="rotate: -90deg;"><svg
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/riders"><span style="rotate: -90deg;"><svg
                       xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                       <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                     </svg></span><span class="font-bold text-[20px] sm:text-[20px] tracking-[0.5px]">Become a
                     Rider</span></a></li>
-              <li class="mb-3"> <a class="flex gap-1 items-center" href="/#vendors"><span style="rotate: -90deg;"><svg
+              <li class="mb-3"> <a class="flex gap-1 items-center" href="/vendors"><span style="rotate: -90deg;"><svg
                       xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
                       <path d="M1 1.86124L6 6.86124L11 1.86124" stroke="#000" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round"></path>
@@ -137,11 +136,12 @@
 
 <body>
   <main id="app"></main>
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/main.js" defer></script>
+  <script type="module" src="/src/js/components/accordion.js" defer></script>
 </body>
 
-<div class="bg-[#080403] pt-6 sm:pt-7 lg:pt-10 xl:pt-12 2xl:pt-16 relative"><img
-    src="/assets/footer-img-D05Xq8gM.png" alt="" class="absolute -top-1 md:-top-9 left-0 w-full -mt-1">
+<div class="bg-[#080403] pt-6 sm:pt-7 lg:pt-10 xl:pt-12 2xl:pt-16 relative"><img src="/assets/footer-img-D05Xq8gM.png"
+    alt="" class="absolute -top-1 md:-top-9 left-0 w-full -mt-1">
   <section class="py-8 pb-4 2xl:pt-12 2xl:pb-6">
     <div class="container mx-auto">
       <div class="w-[93%] lg:w-full xl:w-11/12 2xl:w-11/12 mx-auto">
@@ -163,8 +163,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">ROUVOO is an e-commerce platform designed to simplify your daily
+                      <div class="accordion-content">
+                        <p>ROUVOO is an e-commerce platform designed to simplify your daily
                           life by offering a wide range of services, including food delivery, gadgets, cleaning
                           services, and bill payments, all in one seamless, user-friendly application.</p>
                       </div>
@@ -177,8 +177,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We provide food delivery, gadget shopping, cleaning services, and
+                      <div class="accordion-content">
+                        <p>We provide food delivery, gadget shopping, cleaning services, and
                           bill payment options, ensuring convenience and efficiency for our users.</p>
                       </div>
                     </div>
@@ -190,8 +190,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Download the ROUVOO app from your app store, create an account, and
+                      <div class="accordion-content">
+                        <p>Download the ROUVOO app from your app store, create an account, and
                           explore the range of services we offer.</p>
                       </div>
                     </div>
@@ -203,8 +203,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">ROUVOO is currently available in Akure and its environs with plans
+                      <div class="accordion-content">
+                        <p>ROUVOO is currently available in Akure and its environs with plans
                           to expand to other regions in the near future.</p>
                       </div>
                     </div>
@@ -216,8 +216,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We partner with trusted vendors and service providers, and all
+                      <div class="accordion-content">
+                        <p>We partner with trusted vendors and service providers, and all
                           transactions are monitored to ensure high-quality and reliable service.</p>
                       </div>
                     </div>
@@ -229,8 +229,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, the ROUVOO app provides real-time tracking for your orders and
+                      <div class="accordion-content">
+                        <p>Yes, the ROUVOO app provides real-time tracking for your orders and
                           service requests, keeping you updated every step of the way.</p>
                       </div>
                     </div>
@@ -244,8 +244,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We accept multiple payment methods, including debit/credit cards,
+                      <div class="accordion-content">
+                        <p>We accept multiple payment methods, including debit/credit cards,
                           bank transfers, and in-app wallets.</p>
                       </div>
                     </div>
@@ -257,8 +257,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Delivery fees may vary depending on your location and the service
+                      <div class="accordion-content">
+                        <p>Delivery fees may vary depending on your location and the service
                           selected. The exact fee will be displayed during checkout.</p>
                       </div>
                     </div>
@@ -270,8 +270,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Our customer support team is available to assist you. Simply contact
+                      <div class="accordion-content">
+                        <p>Our customer support team is available to assist you. Simply contact
                           us via the app or email, and we’ll resolve your issue promptly.</p>
                       </div>
                     </div>
@@ -283,8 +283,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, ROUVOO prioritises the security of your personal and payment
+                      <div class="accordion-content">
+                        <p>Yes, ROUVOO prioritises the security of your personal and payment
                           information with advanced encryption and secure payment gateways.</p>
                       </div>
                     </div>
@@ -296,8 +296,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, we welcome partnerships with local businesses. Contact us to
+                      <div class="accordion-content">
+                        <p>Yes, we welcome partnerships with local businesses. Contact us to
                           discuss how we can work together to provide exceptional services to our users.</p>
                       </div>
                     </div>
@@ -309,8 +309,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Follow us on social media and subscribe to our newsletter for
+                      <div class="accordion-content">
+                        <p>Follow us on social media and subscribe to our newsletter for
                           updates, promotions, and new features.</p>
                       </div>
                     </div>
@@ -326,8 +326,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">ROUVOO is an e-commerce platform designed to simplify your daily
+                      <div class="accordion-content">
+                        <p>ROUVOO is an e-commerce platform designed to simplify your daily
                           life by offering a wide range of services, including food delivery, gadgets, cleaning
                           services, and bill payments, all in one seamless, user-friendly application.</p>
                       </div>
@@ -340,8 +340,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We provide food delivery, gadget shopping, cleaning services, and
+                      <div class="accordion-content">
+                        <p>We provide food delivery, gadget shopping, cleaning services, and
                           bill payment options, ensuring convenience and efficiency for our users.</p>
                       </div>
                     </div>
@@ -353,8 +353,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Download the ROUVOO app from your app store, create an account, and
+                      <div class="accordion-content">
+                        <p>Download the ROUVOO app from your app store, create an account, and
                           explore the range of services we offer.</p>
                       </div>
                     </div>
@@ -366,8 +366,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">ROUVOO is currently available in Akure and its environs with plans
+                      <div class="accordion-content">
+                        <p>ROUVOO is currently available in Akure and its environs with plans
                           to expand to other regions in the near future.</p>
                       </div>
                     </div>
@@ -379,8 +379,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We partner with trusted vendors and service providers, and all
+                      <div class="accordion-content">
+                        <p>We partner with trusted vendors and service providers, and all
                           transactions are monitored to ensure high-quality and reliable service.</p>
                       </div>
                     </div>
@@ -392,8 +392,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, the ROUVOO app provides real-time tracking for your orders and
+                      <div class="accordion-content">
+                        <p>Yes, the ROUVOO app provides real-time tracking for your orders and
                           service requests, keeping you updated every step of the way.</p>
                       </div>
                     </div>
@@ -405,8 +405,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">We accept multiple payment methods, including debit/credit cards,
+                      <div class="accordion-content">
+                        <p>We accept multiple payment methods, including debit/credit cards,
                           bank transfers, and in-app wallets.</p>
                       </div>
                     </div>
@@ -418,8 +418,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Delivery fees may vary depending on your location and the service
+                      <div class="accordion-content">
+                        <p>Delivery fees may vary depending on your location and the service
                           selected. The exact fee will be displayed during checkout.</p>
                       </div>
                     </div>
@@ -431,8 +431,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Our customer support team is available to assist you. Simply contact
+                      <div class="accordion-content">
+                        <p>Our customer support team is available to assist you. Simply contact
                           us via the app or email, and we’ll resolve your issue promptly.</p>
                       </div>
                     </div>
@@ -444,8 +444,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, ROUVOO prioritises the security of your personal and payment
+                      <div class="accordion-content">
+                        <p>Yes, ROUVOO prioritises the security of your personal and payment
                           information with advanced encryption and secure payment gateways.</p>
                       </div>
                     </div>
@@ -457,8 +457,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Yes, we welcome partnerships with local businesses. Contact us to
+                      <div class="accordion-content">
+                        <p>Yes, we welcome partnerships with local businesses. Contact us to
                           discuss how we can work together to provide exceptional services to our users.</p>
                       </div>
                     </div>
@@ -470,8 +470,8 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13 11H22V13H13V22H11V13H2V11H11V2H13V11Z"
                               fill="#E7E7E9"></path>
                           </svg></span></button>
-                      <div class="accordion-content ">
-                        <p class="px-4 text-[13px]">Follow us on social media and subscribe to our newsletter for
+                      <div class="accordion-content">
+                        <p>Follow us on social media and subscribe to our newsletter for
                           updates, promotions, and new features.</p>
                       </div>
                     </div>
@@ -519,8 +519,7 @@
             </div>
           </div>
           <div class="sm:w-[80%] md:w-[90%] lg:w-[40%] mx-auto sm:mx-0 sm:ml-auto md:ml-0 lg:text-end pt-3 sm:pt-8"><img
-              src="/assets/app-phone-B0gHaMJ9.png" class="mx-auto xl:w-[40%] sm:mx-0 sm:ml-auto relative z-10"
-              alt="">
+              src="/assets/app-phone-B0gHaMJ9.png" class="mx-auto xl:w-[40%] sm:mx-0 sm:ml-auto relative z-10" alt="">
           </div>
         </div><img src="/assets/app-up-img-bRAGlkeQ.png"
           class="absolute top-0 right-[20%] md:right-[36%] max-w-[100px] sm:max-w-[150px] xl:max-w-[220px] " alt=""><img
