@@ -54,11 +54,10 @@ export default class NavbarController {
         this.mobileNavBar.classList.remove('-translate-x-full');
         this.mobileNavBar.classList.add('translate-x-0');
 
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.classList.remove('hidden');
-        }
+        this.mobileNavBarOverlay?.classList.remove('hidden');
 
-        document.body.style.overflow = 'hidden';
+        document.documentElement.classList.add('nav-open');
+        document.body.classList.add('nav-open');
     }
 
     close() {
@@ -68,10 +67,9 @@ export default class NavbarController {
         this.mobileNavBar.classList.add('-translate-x-full');
         this.mobileNavBar.classList.remove('translate-x-0');
 
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.classList.add('hidden');
-        }
+        this.mobileNavBarOverlay?.classList.add('hidden');
 
-        document.body.style.overflow = 'auto';
+        document.documentElement.classList.remove('nav-open');
+        document.body.classList.remove('nav-open');
     }
 }
