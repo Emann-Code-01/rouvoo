@@ -1,31 +1,32 @@
 const wrapper = document.querySelector('.swiper-wrapper');
 const slides = document.querySelectorAll('.swiper-slide');
+const container = document.querySelector('.swiper-container');
+
+if (!wrapper || !slides.length || !container) return;
+
 let currentIndex = 0;
 const totalSlides = slides.length;
 const autoplayDelay = 3000;
+let autoplayInterval = null;
 
 function goToSlide(index) {
     currentIndex = index;
-    const offset = -currentIndex * 100;
-    wrapper.style.transform = `translateX(${offset}%)`;
+    wrapper.style.transform = `translateX(${-currentIndex * 100}%)`;
 }
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    goToSlide(currentIndex);
+    goToSlide((currentIndex + 1) % totalSlides);
 }
 
-// Start autoplay
-setInterval(nextSlide, autoplayDelay);
-
-// Optional: Pause on hover
-const container = document.querySelector('.swiper-container');
-let autoplayInterval = setInterval(nextSlide, autoplayDelay);
-
-container.addEventListener('mouseenter', () => {
-    clearInterval(autoplayInterval);
-});
-
-container.addEventListener('mouseleave', () => {
+function startAutoplay() {
     autoplayInterval = setInterval(nextSlide, autoplayDelay);
-});
+}
+
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+startAutoplay();
+
+container.addEventListener('mouseenter', stopAutoplay);
+container.addEventListener('mouseleave', startAutoplay);

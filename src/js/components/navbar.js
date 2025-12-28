@@ -1,12 +1,6 @@
-// oxlint-disable no-unused-vars
-// Navbar State Management
 export default class NavbarController {
     constructor() {
         this.isOpen = false;
-        this.mobileNav = null;
-        this.closeNavbar = null;
-        this.mobileNavBar = null;
-        this.mobileNavBarOverlay = null;
     }
 
     init() {
@@ -19,15 +13,6 @@ export default class NavbarController {
             console.warn('Navbar elements not found, skipping navbar init');
             return;
         }
-        try {
-            this.mobileNavBar.style.transform = 'translateX(-100%)';
-            this.mobileNavBar.style.transition = 'transform 0.3s ease-in-out';
-        } catch (e) {
-        }
-
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.style.display = this.mobileNavBarOverlay.classList.contains('hidden') ? 'none' : '';
-        }
 
         this.attachEventListeners();
     }
@@ -38,24 +23,13 @@ export default class NavbarController {
             this.open();
         });
 
-        if (this.closeNavbar) {
-            this.closeNavbar.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.close();
-            });
-        }
+        this.closeNavbar?.addEventListener('click', () => this.close());
 
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.addEventListener('click', () => {
-                this.close();
-            });
-        }
+        this.mobileNavBarOverlay?.addEventListener('click', () => this.close());
 
-        const navLinks = this.mobileNavBar.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => this.close());
-        });
-        // Close nav when pressing Escape
+        this.mobileNavBar.querySelectorAll('a')
+            .forEach(link => link.addEventListener('click', () => this.close()));
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') this.close();
         });
@@ -63,41 +37,23 @@ export default class NavbarController {
 
     open() {
         if (this.isOpen) return;
-
         this.isOpen = true;
+
         this.mobileNavBar.classList.remove('-translate-x-full');
         this.mobileNavBar.classList.add('translate-x-0');
 
-        try {
-            this.mobileNavBar.style.transform = 'translateX(0)';
-        } catch (e) { }
-
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.classList.remove('hidden');
-            this.mobileNavBarOverlay.style.display = '';
-        }
-
-        document.documentElement.classList.add('nav-open');
+        this.mobileNavBarOverlay?.classList.remove('hidden');
         document.body.classList.add('nav-open');
     }
 
     close() {
         if (!this.isOpen) return;
-
         this.isOpen = false;
+
         this.mobileNavBar.classList.add('-translate-x-full');
         this.mobileNavBar.classList.remove('translate-x-0');
 
-        try {
-            this.mobileNavBar.style.transform = 'translateX(-100%)';
-        } catch (e) { }
-
-        if (this.mobileNavBarOverlay) {
-            this.mobileNavBarOverlay.classList.add('hidden');
-            this.mobileNavBarOverlay.style.display = 'none';
-        }
-
-        document.documentElement.classList.remove('nav-open');
+        this.mobileNavBarOverlay?.classList.add('hidden');
         document.body.classList.remove('nav-open');
     }
 }

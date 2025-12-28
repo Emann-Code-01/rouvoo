@@ -1,14 +1,19 @@
 const routes = {
     "/": "/pages/home.html",
-    "/about": "/pages/about.html",
-    "/faq": "/pages/faq.html",
-    "/contact-us": "/pages/contact-us.html",
-    "/riders": "/pages/riders.html",
-    "/vendors": "/pages/vendors.html",
+    "about": "/pages/about.html",
+    "faq": "/pages/faq.html",
+    "contact-us": "/pages/contact-us.html",
+    "riders": "/pages/riders.html",
+    "vendors": "/pages/vendors.html",
 };
 
+let currentRequestId = 0;
+
 function loadRoute() {
-    const path = window.location.pathname;
+    const requestId = ++currentRequestId;
+
+    const basePath = "/";
+    const path = window.location.pathname.replace(basePath, "") || "/";
     const route = routes[path];
     const app = document.getElementById("app");
 
@@ -19,25 +24,26 @@ function loadRoute() {
         return;
     }
 
+    app.innerHTML = "<p class='loading'>Loading...</p>";
+
     fetch(route)
         .then(res => res.text())
         .then(html => {
+            if (requestId !== currentRequestId) return;
             app.innerHTML = html;
             window.scrollTo(0, 0);
         })
         .catch(() => {
+            if (requestId !== currentRequestId) return;
             app.innerHTML = "<h1>Error loading page</h1>";
         });
 }
 
 export function initRouter() {
-    // Handle browser back/forward buttons
     window.addEventListener("popstate", loadRoute);
 
-    // Load initial route
     loadRoute();
 
-    // Intercept all link clicks
     document.addEventListener("click", (e) => {
         const link = e.target.closest("a");
         if (link && link.href.startsWith(window.location.origin)) {
